@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  width:20%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+  input[type=text], select {
+  width: 100%;
+  padding-top: 0;
+  padding-left: 0;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing:border-box;
+  background-color:white;
+  } 
+label {
+	cursor: pointer;
+	color: rgb(233, 241, 237);
+	display: block;
+	margin: 3px;
+}
+
+
+</style>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script type="text/javascript">
+           $(document).ready(function(){
+             $(".button").click(function(){  
+            
+              var a = $(this).text();
+              var para = $("textarea");
+              
+              if (a == "Bold") 
+              {
+                para.css("font-weight", "bold");
+              }
+              else if (a == "Italic")
+              {
+                para.css("font-style", "Italic");
+      
+              }
+              else if (a =="Font")
+              {
+                para.css("font-size","40px")
+              }
+              else if(a =="underline")
+              {
+                para.css("text-decoration","underline")
+              }
+                
+            });
+               });
+               $("resetform").click(function(){
+                $("form1")[0].reset();});
+              
+        
+          </script>
+      <body>
+          <form id="form1">
+      <textarea id="review" rows="10" cols="50"></textarea><br><br>
+      <button class="button">Font</button>
+      <button class="button">Bold</button>
+      <button class="button">Italic</button>
+      <button class="button">underline</button>
+      <button id="resetform" value="clear">clear</button>
+          </form>
+    </body>
+  </body>
+</html>
+
+
